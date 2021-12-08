@@ -1,9 +1,9 @@
-/*
+                                                                                                                                                                                                       /*
 SC INI DIBUAT OLEH ZEROYT7
 DAN DI RECODE OLEH KUNZ🗿🙏
 HAPUS TQTQ?
 KNTL BPK KAU PECAH (GADA BAPAK GOSAH BAPER🙏🗿)
-*/
+                                                                                                                                                                                                       */
 
 const 
 { 
@@ -78,7 +78,6 @@ autoketik = true;
 let hit_today = []
 let tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
 let ky_ttt = []
-let virgam = fs.readFileSync('./F4/virgam.jpeg')
 
 //━━━━━━━━━━━━━━━[ DATABASE ]━━━━━━━━━━━━━━━━━//
 
@@ -588,18 +587,20 @@ if (isCmd && isGroup) console.log('\x1b[1;31m\x1b[1;37m', '[\x1b[1;32mKxD\x1b[1;
 if (!mek.key.fromMe && banChats === false) return
 
 //━━━━━━━━━━━━━━━[ MENU ]━━━━━━━━━━━━━━━━━//
-zeroyt7.setStatus(`${botname} || Active Time : ${kyun(uptime)} || ${banChats ? 'PUBLIC-MODE' : 'SELF-MODE'}`).catch((_)=>_);
+//zeroyt7.setStatus(`${botname} || Active Time : ${kyun(uptime)} || ${banChats ? 'PUBLIC-MODE' : 'SELF-MODE'}`).catch((_)=>_);
 
-settingstatus = new Date() * 1;
+//settingstatus = new Date() * 1; 
 switch (command) {
-case 'lolkey':
-case 'cekapikey':
+case 'lolkey': 
+case 'cekapikey': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://api.lolhuman.xyz/api/checkapikey?apikey=${lolkey}`)
 teks = `*YOUR APIKEY*\n\n➸ Ussername= ${anu.result.username}\n➸ Akun Type= ${anu.result.account_type}\n➸ Expired= ${anu.result.expired}\n➸ API = https://api.lolhuman.xyz`
 zeroyt7.sendMessage(from, teks, text, {quoted: mek})
 break
-case 'menu':
-if (isBanned) return reply(mess.Ban)
+case 'menu': 
+if (isBanned) return reply(mess.Ban) 
 if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 timestamp = speed();
 latensi = speed() - timestamp;
@@ -633,8 +634,10 @@ ok = `
 but = [{ buttonId: `.allmenu`, buttonText: { displayText: 'All Menu' }, type: 1 },{ buttonId: `.groupbot`, buttonText: { displayText: 'Group Bot' }, type: 1 },{ buttonId: `.sewabot`, buttonText: { displayText: 'Sewa Bot' }, type: 1 }]
 sendButLoc(from, lolot, ok, img, but)
 break
-case 'allmenu':
-case 'help':
+case 'allmenu': 
+case 'help': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 timestamp = speed();
 latensi = speed() - timestamp;
 ok = `《NEO BOT INFO》
@@ -702,8 +705,10 @@ headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude
 jpegThumbnail: fs.readFileSync("thumbnail.jpg"), 
 contextInfo: {mentionedJid: [sender, Verived, zer, kuz + "@s.whatsapp.net"]}}}, 'buttonsMessage')
 break 
-case 'groupmenu':
-case 'grupmenu':
+case 'groupmenu': 
+case 'grupmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*GROUP MENU*
 
 к⃟●❱${prefix}antilink 1/0
@@ -739,8 +744,10 @@ anu = `*GROUP MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'stickermenu':
-case 'stikermenu':
+case 'stickermenu': 
+case 'stikermenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*STICKER MENU*
 
 к⃟●❱${prefix}ttp
@@ -754,8 +761,10 @@ anu = `*STICKER MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'convertmenu':
-case 'cvmenu':
+case 'convertmenu': 
+case 'cvmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*CONVERT MENU*
 к⃟●❱${prefix}tomp3
 к⃟●❱${prefix}tovideo
@@ -768,8 +777,10 @@ anu = `*CONVERT MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'randommenu':
-case 'randomenu':
+case 'randommenu': 
+case 'randomenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*RANDOM MENU*
 
 к⃟●❱${prefix}meme
@@ -779,8 +790,10 @@ anu = `*RANDOM MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'downloadmenu':
-case 'downloadermenu':
+case 'downloadmenu': 
+case 'downloadermenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*DOWNLOAD MENU*
 
 к⃟●❱${prefix}play
@@ -791,8 +804,10 @@ anu = `*DOWNLOAD MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'islammenu':
-case 'islamimenu':
+case 'islammenu': 
+case 'islamimenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*ISLAM MENU*
 
 к⃟●❱${prefix}alquran
@@ -805,8 +820,10 @@ anu = `*ISLAM MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'animemenu':
-case 'animenu':
+case 'animemenu': 
+case 'animenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*ANIME MENU*
 
 к⃟●❱${prefix}character
@@ -820,8 +837,10 @@ anu = `*ANIME MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'infomenu':
-case 'informationmenu':
+case 'infomenu': 
+case 'informationmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*INFO MENU*
 
 к⃟●❱${prefix}kbbi
@@ -837,7 +856,9 @@ anu = `*INFO MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'randomtextmenu':
+case 'randomtextmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*RANDOM TEXT MENU*
 
 к⃟●❱${prefix}quotes
@@ -853,7 +874,9 @@ anu = `*RANDOM TEXT MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'searchmenu':
+case 'searchmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*SEARCH MENU*
 к⃟●❱${prefix}gimage
 к⃟●❱${prefix}wallpapersearch
@@ -864,7 +887,9 @@ anu = `*SEARCH MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'kerangmenu':
+case 'kerangmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*KERANG MENU*
 
 к⃟●❱${prefix}tebakumur
@@ -884,8 +909,10 @@ anu = `*KERANG MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'gamemenu':
-case 'funmenu':
+case 'gamemenu': 
+case 'funmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*GAME MENU*
 
 к⃟●❱${prefix}tictactoe @tag
@@ -905,8 +932,10 @@ anu = `*GAME MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'stalkingmenu':
-case 'stalkmenu':
+case 'stalkingmenu': 
+case 'stalkmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*STALK MENU*
 
 к⃟●❱${prefix}stalkig
@@ -916,7 +945,9 @@ anu = `*STALK MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'asupanmenu':
+case 'asupanmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*ASUPAN MENU*
 к⃟●❱${prefix}asupan
 к⃟●❱${prefix}asupancecan
@@ -929,7 +960,9 @@ anu = `*ASUPAN MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'cecanmenu': case 'cewemenu':
+case 'cecanmenu': case 'cewemenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*CECAN MENU*
 
 к⃟●❱${prefix}cecanvietnam
@@ -942,8 +975,10 @@ anu = `*CECAN MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'textpromenu':
-case 'textprome':
+case 'textpromenu': 
+case 'textprome': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*TEXT PRO MENU*
 
 к⃟●❱${prefix}blackpink 
@@ -982,7 +1017,9 @@ anu = `*TEXT PRO MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'ephotomenu':
+case 'ephotomenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*EPHOTO MENU*
 
 к⃟●❱${prefix}wetglass
@@ -1019,7 +1056,9 @@ anu = `*EPHOTO MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'bokepmenu':
+case 'bokepmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*BOKEP MENU*
 к⃟●❱${prefix}bokep1
 к⃟●❱${prefix}bokep2
@@ -1035,7 +1074,9 @@ anu = `*BOKEP MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'storagemenu':
+case 'storagemenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*STORAGE MENU*
 
 к⃟●❱${prefix}addimage
@@ -1056,8 +1097,10 @@ anu = `*STORAGE MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'randomimagemenu':
-case 'randomimage':
+case 'randomimagemenu': 
+case 'randomimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*RANDOM IMAGE MENU*
 
 к⃟●❱${prefix}art
@@ -1094,7 +1137,9 @@ anu = `*RANDOM IMAGE MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'ownermenu':
+case 'ownermenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*BOSS MENU*
 
 к⃟●❱${prefix}*bc*
@@ -1113,7 +1158,9 @@ anu = `*BOSS MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'warmenu':
+case 'warmenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*WAR MENU*
 
 к⃟●❱${prefix}virtex1
@@ -1128,14 +1175,14 @@ anu = `*WAR MENU*
 к⃟●❱${prefix}buglokasi
 к⃟●❱${prefix}bugpc
 к⃟●❱${prefix}bugtroli2
-к⃟●❱${prefix}tovirgam
-к⃟●❱${prefix}tovirvid
 
 *BY KUNZXD*`
 reply(anu)
 break
-case 'baileysmenu':
-case 'baileymenu':
+case 'baileysmenu': 
+case 'baileymenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*BAILEYS MENU*
 к⃟●❱x 
 к⃟●❱>  
@@ -1145,7 +1192,9 @@ anu = `*BAILEYS MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'othermenu':
+case 'othermenu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = `*OTHER MENU*
 
 к⃟●❱${prefix}ultah
@@ -1163,7 +1212,9 @@ anu = `*OTHER MENU*
 *BY KUNZXD*`
 reply(anu)
 break
-case 'pdf':
+case 'pdf': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 otod = "6287778886786@s.whatsapp.net"
 dtod = `${sender}`
 uwu = '```'
@@ -1173,7 +1224,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR GROUP ]━━━━━━━━━━━━━━━━━//
 
-case 'demoteall':
+case 'demoteall': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
  if (!isGroup) return reply(mess.only.group)
  if (!isGroupAdmins) return(mess.only.admin)
  if (!isBotGroupAdmins) return(mess.only.Badmin)
@@ -1183,7 +1236,9 @@ for (let mem of groupMembers) {
   	}
 zeroyt7.groupDemoteAdmin(from, members_id)
 break
-case 'promoteall':
+case 'promoteall': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
  if (!isGroup) return reply(mess.only.group)
  if (!isGroupAdmins) return(mess.only.admin)
  if (!isBotGroupAdmins) return(mess.only.Badmin)
@@ -1193,7 +1248,9 @@ for (let mem of groupMembers) {
   	}
 zeroyt7.groupMakeAdmin(from, members_id)
 break
-case 'sider':
+case 'sider': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 infom = await zeroyt7.messageInfo(from, mek.message.extendedTextMessage.contextInfo.stanzaId)
 tagg = []
@@ -1205,9 +1262,15 @@ tagg.push(i.jid)
 }
 mentions(teks, tagg, true)
 break
-case 'resetlinkgc':
- case 'resetlinkgroup':
- case 'revoke':
+case 'resetlinkgc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
+ case 'resetlinkgroup': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
+ case 'revoke': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
  if (!isGroup) return reply(mess.only.group)
  if (!isGroupAdmins) return(mess.only.admin)
  if (!isBotGroupAdmins) return(mess.only.Badmin)
@@ -1215,7 +1278,9 @@ case 'resetlinkgc':
  zeroyt7.query({json, expect200: true})
   reply('Sukses Mereset Link Group')
  break
-case 'kontag':
+case 'kontag': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return(mess.only.admin)
 argzi = arg.split('|')
@@ -1227,7 +1292,9 @@ hideTagKontak(from, mentioned[0].split('@')[0], argzi[1])
 hideTagKontak(from, argzi[0], argzi[1])
 }
 break
-case 'totag':
+case 'totag': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
@@ -1341,20 +1408,24 @@ fs.unlinkSync(file)
   reply(`reply gambar/dokumen/gif/sticker/audio/video dengan caption ${prefix}totag`)
 }
 break
-case 'link':
-case 'linkgc':
+case 'link': 
+case 'linkgc': 
 case 'linkgrup' :
-case 'linkgroup':
+case 'linkgroup': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 linkgc = await zeroyt7.groupInviteCode(from)
 yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
 zeroyt7.sendMessage(from, yeh, text, { quoted: fstatus })
 break
-case 'online':
-case 'listonline':
+case 'online': 
+case 'listonline': 
 case 'here':                
-case 'nyimak':
+case 'nyimak': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
  try {
  let ido = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : from
@@ -1364,7 +1435,9 @@ if (!isGroup) return reply(mess.only.group)
  reply(`${e}`)
 }
  break
-case 'leave':
+case 'leave': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroupAdmins) return reply(mess.only.admin)
   setTimeout( () => {
   zeroyt7.groupLeave(from) 
@@ -1373,7 +1446,9 @@ if (!isGroupAdmins) return reply(mess.only.admin)
   reply('Byee...')
   }, 0)
   break
-case 'welcome':
+case 'welcome': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (args.length < 1) return reply(`Ketik :\n${prefix}welcome 1 untuk mengaktifkan\n${prefix}welcome 0 untuk menonaktifkan`)
@@ -1391,7 +1466,9 @@ reply(`\`\`\`✓Sukses menonaktifkan fitur welcome di group\`\`\` *${groupMetada
 reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 }
 break
-case 'antilink':
+case 'antilink': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   if (!isGroup) return reply(mess.only.group)
   if (!isGroupAdmins) return reply(mess.only.admin)
   if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
@@ -1410,7 +1487,9 @@ case 'antilink':
   reply(`1 untuk mengaktifkan, 0 untuk mematikan`)
 }
   break
-case 'antivirtex':
+case 'antivirtex': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   if (!isGroup) return reply(mess.only.group)
   if (!isGroupAdmins) return reply(mess.only.admin)
   if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
@@ -1486,7 +1565,9 @@ mentions(`Perintah di terima, Menurunkan : @${mentioned[0].split('@')[0]} Menjad
 zeroyt7.groupDemoteAdmin(from, mentioned)
 }
 break
-case 'add':
+case 'add': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 try {
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1532,7 +1613,9 @@ mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, me
 zeroyt7.groupRemove(from, mentioned)
 }
 break
-case 'hedsot':
+case 'hedsot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1552,7 +1635,9 @@ mentions(`Berhasil Meng hedsot kepalanya  : @${mentioned[0].split('@')[0]}`, men
 zeroyt7.groupRemove(from, mentioned)
 }
 break
-case 'tagall':
+case 'tagall': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1565,21 +1650,27 @@ members_id.push(mem.jid)
 }
 mentions(teks, members_id, true)
 break
-case 'setname':
+case 'setname': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 zeroyt7.groupUpdateSubject(from, `${body.slice(9)}`)
 zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: fstatus })
 break
-case 'setdesc':
+case 'setdesc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 zeroyt7.groupUpdateDescription(from, `${body.slice(9)}`)
 zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: fstatus })
 break
-case 'setpp':
+case 'setpp': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1588,7 +1679,9 @@ await zeroyt7.updateProfilePicture(from, media)
 reply(mess.wait)
 reply(`\`\`\`✓Sukses Mengganti Profil Group\`\`\` *${groupMetadata.subject}*`)
 break
-case 'hidetag':
+case 'hidetag': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -1606,7 +1699,9 @@ quoted: fstatus
 }
 zeroyt7.sendMessage(from, options, text)
 break
-case 'getpp':
+case 'getpp': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
    linkpp = await zeroyt7.getProfilePicture(from) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
    buffer = await getBuffer(linkpp)
@@ -1623,7 +1718,9 @@ case 'getpp':
    zeroyt7.sendMessage(from, buffer, image, { quoted: fstatusi, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
 }
    break
-case 'hidetag20':
+case 'hidetag20': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if(!isGroup) return reply(mess.only.group)
 if (!isPremium && !isOwner ) return sendButMessage (mess.only.prem) 
 var value = body.slice(11)
@@ -1663,21 +1760,27 @@ break
    
 //━━━━━━━━━━━━━━━[ FITUR STICKER ]━━━━━━━━━━━━━━━━━//
 
-case 'attp':
+case 'attp': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
 buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
 zeroyt7.sendMessage(from, buffer, sticker, { quoted: fstatus })
 break
-case 'ttp':
+case 'ttp': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
 woy = args.join(" ")
 reply('wait....')
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerFromUrl(from, anjay) 
 break
-case 'sticker':
-case 'stiker':
-case 's':
+case 'sticker': 
+case 'stiker': 
+case 's': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 const media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './F2/media_user')
@@ -1751,7 +1854,9 @@ fs.unlinkSync(ranw)
 reply(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim`)
 }
 break
-case 'doge':
+case 'doge': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
 .then(res => res.text())
@@ -1762,8 +1867,10 @@ sendStickerFromUrl(from, pjr)
 }
 )
 break
-case 'patrick':
-case 'pat':
+case 'patrick': 
+case 'pat': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
 .then(res => res.text())
@@ -1774,8 +1881,10 @@ let pjr = tod[Math.floor(Math.random() * tod.length)];
 }
 )
 break
-case 'gura':
-case 'gawgura':
+case 'gura': 
+case 'gawgura': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
 .then(res => res.text())
@@ -1786,8 +1895,10 @@ sendStickerFromUrl(from, pjr)
 }
 )
 break
-case 'anime':
-case 'stickeranime':
+case 'anime': 
+case 'stickeranime': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
 .then(res => res.text())
@@ -1801,8 +1912,10 @@ break
  
 //━━━━━━━━━━━━━━━[ FITUR CONVERT ]━━━━━━━━━━━━━━━━━//
 
-case 'toimg':
-case 'toimage':
+case 'toimg': 
+case 'toimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isQuotedSticker) return reply(' reply stickernya gan')
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './F2/media_user')
@@ -1815,7 +1928,9 @@ costum(buffer, image, Verived, `Jangan Lupa SUBSCRIBE YT : KUNZXD`)
 fs.unlinkSync(ran)
 })
 break
-case 'tomp3':
+case 'tomp3': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 zeroyt7.updatePresence(from, Presence.recording)
 if (!isQuotedVideo) return reply('Reply Video nya Tod')
 reply(mess.wait)
@@ -1830,7 +1945,9 @@ zeroyt7.sendMessage(from, bufferlkj, audio, { mimetype: 'audio/mp4', quoted: fst
 fs.unlinkSync(ran)
 })
 break
-case 'tovideo':
+case 'tovideo': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isQuotedSticker) return reply('Reply stikernya')
 reply(mess.wait)
 anumedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -1843,7 +1960,9 @@ zeroyt7.sendMessage(from, buffer, video, { quoted: fstatus, caption: 'Success' }
 fs.unlinkSync(ran)
 })
 break
-case 'tinyurl':
+case 'tinyurl': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 if (args.length == 0) return reply(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
@@ -1852,7 +1971,9 @@ get_result = ini_result.result
 ini_txt = `Tinyurl : ${get_result}`
 reply (ini_txt)
 break
-case 'shorturl':
+case 'shorturl': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 if (args.length == 0) return reply(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
@@ -1861,7 +1982,9 @@ get_result = ini_result.result
 ini_txt = `shorturl : ${get_result}`
 reply (ini_txt)
 break
-case 'cuttly':
+case 'cuttly': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait)
 if (args.length == 0) return reply(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
@@ -1870,8 +1993,10 @@ get_result = ini_result.result
 ini_txt = `cuttly : ${get_result}`
 reply (ini_txt)
 break 
-case 'imgtourl':
-case 'img2url':
+case 'imgtourl': 
+case 'img2url': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(mess.wait) 
 var imgbb = require('imgbb-uploader')
 var encmedia  = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -1886,22 +2011,12 @@ zeroyt7.sendMessage(from, ibb, image, { quoted: fstatus , caption: caps})
 throw err
 })
 break
-case 'tourl':
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
-reply(mess.wait)
-boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-owgi = await zeroyt7.downloadMediaMessage(boij)
-res = await uploadImages(owgi)
-reply(res)
-} else {
-reply('kirim/reply gambar/video')
-}
-break
-
 
 //━━━━━━━━━━━━━━━[ FITUR ISLAMI ]━━━━━━━━━━━━━━━━━//
 
-case 'listsurah':
+case 'listsurah': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/quran?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = 'List Surah:\n'
@@ -1910,7 +2025,9 @@ ini_txt += `${x}. ${get_result[x]}\n`
 }
 reply(ini_txt)
 break
-case 'alquran':
+case 'alquran': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply(`Nomor Surah Yg Mau Di Cari Mana\nContoh : ${prefix + command} 18 or ${prefix + command} 18/10 or ${prefix + command} 18/1-10`)
 urls = `https://api.lolhuman.xyz/api/quran/${args[0]}?apikey=${lolkey}`
 quran = await fetchJson(urls)
@@ -1929,14 +2046,18 @@ ini_txt = ini_txt.replace(/<strong>/g, "").replace(/<\/strong>/g, "")
 ini_txt = ini_txt.replace(/<u>/g, "").replace(/<\/u>/g, "")
 reply(ini_txt)
 break
-case 'alquranaudio':
+case 'alquranaudio': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nomor Surah Yg Mau Dicari Mana\nContoh : ${prefix + command} 18 or ${prefix + command} 18/10`)
 reply('Sabar Sedang Proses...')
 surah = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${lolkey}`)
 await zeroyt7.sendMessage(from, ini_buffer, audio, { quoted: fstatus, mimetype: Mimetype.mp4Audio })
 break
-case 'asmaulhusna':
+case 'asmaulhusna': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/asmaulhusna?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `No : ${get_result.index}\n`
@@ -1946,7 +2067,9 @@ ini_txt += `Indonesia : ${get_result.id}\n`
 ini_txt += `English : ${get_result.en}`
 reply(ini_txt)
 break
-case 'kisahnabi':
+case 'kisahnabi': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Nabi Yg Mau Dicari Mana\nContoh : ${prefix + command} Muhammad`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/kisahnabi/${query}?apikey=${lolkey}`)
@@ -1958,7 +2081,9 @@ ini_txt += `Tempat : ${get_result.place}\n`
 ini_txt += `Story : \n${get_result.story}`
 reply(ini_txt)
 break
-case 'jadwalsholat':
+case 'jadwalsholat': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Kotanya Mana\nContoh : ${prefix + command} Yogyakarta`)
 daerah = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/sholat/${daerah}?apikey=${lolkey}`)
@@ -1979,7 +2104,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR DOWNLOADER ]━━━━━━━━━━━━━━━━━//
 
-case 'play':
+case 'play': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return await reply(`Judul Lagunya Mana Tod\nContoh : ${prefix + command} melukis senja`)
 await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkey}&query=${args.join(" ")}`)
 .then(async(result) => {
@@ -1995,7 +2122,9 @@ await zeroyt7.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filen
 })
 })
 break
-case 'ytsearch':
+case 'ytsearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Judul Video Yg Mau Di Cari Tod\nContoh : ${prefix + command} Melukis Senja`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkey}&query=${query}`)
@@ -2010,13 +2139,17 @@ ini_txt += `Link : https://www.youtube.com/watch?v=${x.videoId}\n\n`
 }
 reply(ini_txt)
 break
-case 'tiktokmusic':
+case 'tiktokmusic': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Link Nya Mana Tod\nContoh: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
 ini_link = args[0]
 get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
 await zeroyt7.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: fstatus })
 break
-case 'pinterest':
+case 'pinterest': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Example: ${prefix + command} loli kawaii`)
 query = args.join(" ")
 ini_url = await fetchJson(`https://api.lolhuman.xyz/api/pinterest?apikey=${lolkey}&query=${query}`)
@@ -2027,7 +2160,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR ANIME ]━━━━━━━━━━━━━━━━━//
 
-case 'character':
+case 'character': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${lolkey}&query=${query}`)
@@ -2045,7 +2180,9 @@ ini_txt += `\nDescription : \n${get_result.description.replace(/__/g, "_")}`
 thumbnail = await getBuffer(get_result.image.large)
 await zeroyt7.sendMessage(from, thumbnail, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'manga':
+case 'manga': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/manga?apikey=${lolkey}&query=${query}`)
@@ -2074,7 +2211,9 @@ ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
 await zeroyt7.sendMessage(from, thumbnail, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'anime':
+case 'anime': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/anime?apikey=${lolkey}&query=${query}`)
@@ -2105,7 +2244,9 @@ ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
 await zeroyt7.sendMessage(from, thumbnail, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'kusonimesearch':
+case 'kusonimesearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=${lolkey}&query=${query}`)
@@ -2132,7 +2273,9 @@ ini_txt += `${y} - ${link_dl[x][y]}\n`
 ini_buffer = await getBuffer(get_result.thumbnail)
 await zeroyt7.sendMessage(from, ini_buffer, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'otakudesusearch':
+case 'otakudesusearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=${lolkey}&query=${query}`)
@@ -2165,7 +2308,9 @@ ini_txt += `${z} - ${down_link[z]}\n`
 }
 reply(ini_txt)
 break
-case 'nhentaisearch':
+case 'nhentaisearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${lolkey}&query=${query}`)
@@ -2182,7 +2327,9 @@ ini_txt += `Favourite : ${x.favourite}\n\n`
 }
 reply(ini_txt)
 break
-case 'nekopoisearch':
+case 'nekopoisearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${lolkey}&query=${query}`)
@@ -2198,7 +2345,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR INFORMATION ]━━━━━━━━━━━━━━━━━//
 
-case 'kbbi':
+case 'kbbi': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Yg Mau Dicari Mana Tod\nContoh: ${prefix + command} kursi`)
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/kbbi?apikey=${lolkey}&query=${args.join(" ")}`)
 lila = get_result.result
@@ -2215,7 +2364,9 @@ ini_txt += `\`\`\`Contoh Kalimat : \n${x.makna[0].contoh}\`\`\`\n`
 }
 reply(ini_txt)
 break
-case 'jarak':
+case 'jarak': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Kotanya Mana Tod\nContoh: ${prefix + command} jakarta - yogyakarta`)
 pauls = args.join(" ")
 teks1 = pauls.split("-")[0].trim()
@@ -2240,14 +2391,18 @@ ini_txt += `❍┤ Jalan Kaki : ${x.jalan_kaki}\n`
 ini_txt += `   ╰───────────────❏\n`
 reply(ini_txt)
 break
-case 'wikipedia':
+case 'wikipedia': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Yg Mau Di Cari Mana Tod\nContoh: ${prefix + command} Tahu`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/wiki?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 reply(get_result)
 break
-case 'translate':
+case 'translate': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Teks Yg Mau Di Translate Mana Tod\nContoh: ${prefix + command} en Tahu Bacem`)
 kode_negara = args[0]
 args.shift()
@@ -2261,7 +2416,9 @@ init_txt += `Translated : ${get_result.translated}\n`
 init_txt += `Pronunciation : ${get_result.pronunciation}\n`
 reply(init_txt)
 break
-case 'jadwaltv':
+case 'jadwaltv': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Channel Nya Mana Tod\nContoh: ${prefix + command} SCTV`)
 channel = args[0]
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/jadwaltv/${channel}?apikey=${lolkey}`)
@@ -2272,7 +2429,9 @@ ini_txt += `${x} - ${get_result[x]}\n`
 }
 reply(ini_txt)
 break
-case 'infogempa':
+case 'infogempa': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/infogempa?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Lokasi : ${get_result.lokasi}\n`
@@ -2284,7 +2443,9 @@ ini_txt += `Koordinat : ${get_result.koordinat}`
 get_buffer = await getBuffer(get_result.map)
 await zeroyt7.sendMessage(from, get_buffer, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'cuaca':
+case 'cuaca': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Kotanya Mana Tod\nContoh: ${prefix + command} Temanggung`)
 daerah = args[0]
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/cuaca/${daerah}?apikey=${lolkey}`)
@@ -2300,7 +2461,9 @@ ini_txt += `Permukaan laut : ${get_result.permukaan_laut}\n`
 await zeroyt7.sendMessage(from, { degreesLatitude: get_result.latitude, degreesLongitude: get_result.longitude }, location, { quoted: fstatus })
 reply(ini_txt)
 break
-case 'covidindo':
+case 'covidindo': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/corona/indonesia?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Positif : ${get_result.positif}\n`
@@ -2309,7 +2472,9 @@ ini_txt += `Dirawat : ${get_result.dirawat}\n`
 ini_txt += `Meninggal : ${get_result.meninggal}`
 reply(ini_txt)
 break
-case 'covidglobal':
+case 'covidglobal': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/corona/global?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Positif : ${get_result.positif}\n`
@@ -2321,14 +2486,18 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR RANDOM TEXT ]━━━━━━━━━━━━━━━━━//
 
-case 'quotes':
+case 'quotes': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${lolkey}`)
 quotes = quotes.result
 author = quotes.by
 quotes = quotes.quote
 reply(`_${quotes}_\n\n*― ${author}*`)
 break
-case 'quotesanime':
+case 'quotesanime': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}`)
 quotes = quotes.result
 quote = quotes.quote
@@ -2337,54 +2506,74 @@ anime = quotes.anime
 episode = quotes.episode
 reply(`_${quote}_\n\n*― ${char}*\n*― ${anime} ${episode}*`)
 break
-case 'quotesdilan':
+case 'quotesdilan': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 quotedilan = await fetchJson(`https://api.lolhuman.xyz/api/quotes/dilan?apikey=${lolkey}`)
 reply(quotedilan.result)
 break
-case 'quotesimage':
+case 'quotesimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`)
 await zeroyt7.sendMessage(from, get_result, image, { quotes: fstatus })
 break
-case 'katabijak':
+case 'katabijak': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`)
 reply(get_result.result)
 break
-case 'randomnama':
+case 'randomnama': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://api.lolhuman.xyz/api/random/nama?apikey=${lolkey}`)
 reply(anu.result)
 break
-case 'nicknameff':
-case 'namaff':
+case 'nicknameff': 
+case 'namaff': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://api.lolhuman.xyz/api/freefire/570098876?apikey=${lolkey}`)
 reply(anu.result)
 break
-case 'nicknamepubg':
-case 'namapubg':
+case 'nicknamepubg': 
+case 'namapubg': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://api.lolhuman.xyz/api/pubg/5119961143?apikey=${lolkey}`)
 reply(anu.result)
 break
-case 'nicknameml':
-case 'namaml':
+case 'nicknameml': 
+case 'namaml': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://api.lolhuman.xyz/api/mobilelegend/84830127/2169?apikey=${lolkey}`)
 reply(anu.result)
 break 
 
 //━━━━━━━━━━━━━━━[ FITUR SEARCH ]━━━━━━━━━━━━━━━━━//
 
-case 'gimage':
+case 'gimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Yg Mau Dicari Mana Tod\nContoh: ${prefix + command} Sandrinna`)
 query = args.join(" ")
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${query}`)
 await zeroyt7.sendMessage(from, ini_buffer, image, { quoted: fstatus })
 break
-case 'wallpapersearch':
+case 'wallpapersearch': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Yg Mau Dicari Mana Tod\nContoh: ${prefix + command} Sandrinna`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper?apikey=${lolkey}&query=${query}`)
 ini_buffer = await getBuffer(get_result.result)
 await zeroyt7.sendMessage(from, ini_buffer, image, { quoted: fstatus })
 break
-case 'playstore':
+case 'playstore': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Aplikasinya Mana Tod\nContoh: ${prefix + command} tiktok`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/playstore?apikey=${lolkey}&query=${query}`)
@@ -2400,7 +2589,9 @@ ini_txt += `Price : ${x.price}\n\n`
 }
 reply(ini_txt)
 break
-case 'shopee':
+case 'shopee': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Barang Yg Mau Di Cari Mana Tod\nContoh: ${prefix + command} sepatu`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/shopee?apikey=${lolkey}&query=${query}`)
@@ -2415,7 +2606,9 @@ ini_txt += `Link : ${x.link_produk}\n\n`
 }
 reply(ini_txt)
 break
-case 'google':
+case 'google': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Nama Yg Mau Cari Mana Tod\nContoh: ${prefix + command} sandrinna`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/gsearch?apikey=${lolkey}&query=${query}`)
@@ -2431,41 +2624,55 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR KERANG ]━━━━━━━━━━━━━━━━━//
 
-case 'cekbapak':
+case 'cekbapak': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 const bapak = ['Wah Mantap Lu Masih Punya Bapack\nPasti Bapack Nya Kuli :v\nAwowkwokwwok\n#CandabOs', 'Aowkwwo Disini Ada Yteam :v\nLu Yteam Bro? Awowkwowk\nSabar Bro Ga Punya Bapack\n#Camda', 'Bjir Bapack Mu Ternyata Sudah Cemrai\nSedih Bro Gua Liatnya\nTapi Nih Tapi :v\nTetep Ae Lu Yteam Aowkwowkw Ngakak :v', 'Jangan #cekbapak Mulu Broo :v\nKasian Yang Yteam\nNtar Tersinggung Kan\nYahahaha Hayyuk By : Ramlan ID']
 const cek = bapak[Math.floor(Math.random() * bapak.length)]
 zeroyt7.sendMessage(from, cek, text, { quoted: fstatus })
 break
-case 'rate':
+case 'rate': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} kegantengan saya`)
 const ra = ['4', '9', '17', '28', '34', '48', '59', '62', '74', '83', '97', '100', '29', '94', '75', '82', '41', '39']
 const te = ra[Math.floor(Math.random() * ra.length)]
 zeroyt7.sendMessage(from, 'Pertanyaan : ' + q + '\n\nJawaban : ' + te + '%', text, { quoted: fstatus })
 break
-case 'hobby':
+case 'hobby': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} Rara`)
 const hob = ['Desah Di Game', 'Ngocokin Doi', 'Stalking sosmed nya mantan', 'Kau kan gak punya hobby awokawok', 'Memasak', 'Membantu Atok', 'Mabar', 'Nobar', 'Sosmedtan', 'Membantu Orang lain', 'Nonton Anime', 'Nonton Drakor', 'Naik Motor', 'Nyanyi', 'Menari', 'Bertumbuk', 'Menggambar', 'Foto fotoan Ga jelas', 'Maen Game', 'Berbicara Sendiri']
 const by = hob[Math.floor(Math.random() * hob.length)]
 zeroyt7.sendMessage(from, 'Pertanyaan : hobby ' + q + '\n\nJawaban : ' + by, text, { quoted: fstatus })
 break
-case 'kapankah':
+case 'kapankah': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} aku jadi wibu`)
 const kapan = ['Besok', 'Lusa', 'Tadi', '4 Hari Lagi', '5 Hari Lagi', '6 Hari Lagi', '1 Minggu Lagi', '2 Minggu Lagi', '3 Minggu Lagi', '1 Bulan Lagi', '2 Bulan Lagi', '3 Bulan Lagi', '4 Bulan Lagi', '5 Bulan Lagi', '6 Bulan Lagi', '1 Tahun Lagi', '2 Tahun Lagi', '3 Tahun Lagi', '4 Tahun Lagi', '5 Tahun Lagi', '6 Tahun Lagi', '1 Abad lagi', '3 Hari Lagi']
 const koh = kapan[Math.floor(Math.random() * kapan.length)]
 zeroyt7.sendMessage(from, 'Pertanyaan : kapankah ' + q + '\n\nJawaban : ' + koh, text, { quoted: fstatus })
 break
-case 'apakah':
+case 'apakah': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!q) return reply(`Penggunaan ${command} text\n\nContoh : ${command} saya wibu`)
 const apa = ['Iya', 'Tidak', 'Bisa Jadi', 'Ulangi bro gak paham']
 const kah = apa[Math.floor(Math.random() * apa.length)]
 zeroyt7.sendMessage(from, 'Pertanyaan : apakah ' + q + '\n\nJawaban : ' + kah, text, { quoted: fstatus })
 break
-case 'toxic':
+case 'toxic': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 Toxic().then(toxic => {
 reply (toxic)
 })
 break
-case 'cekwatak':
+case 'cekwatak': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   var namao = pushname
   var prfx = await zeroyt7.getProfilePicture(sender)
   const watak = ['top deh pokoknya','penyayang','pemurah','Pemarah','Pemaaf','Penurut','Baik','baperan','Baik-Hati','penyabar','UwU','Suka Membantu']
@@ -2482,18 +2689,24 @@ case 'cekwatak':
   const typo = tipe[Math.floor(Math.random() * (tipe.length))]
   await reply(`[ INTROGASI SUKSES ]\n\n[Nama]:${namao}\n\n[Watak]:${wtk}\n\n[Akhlak✨]:${akhlak}\n\n[Sifat]:${sft}\n\n[Hobby]:${hby}\n\n[Tipe]:${typo}\n\n[Kelebihan]:${klbh}\n\nNote\n\n_ini hanya main main_`)
   break
-  case 'cekmati':
+  case 'cekmati': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   if (!q) return reply(mess.wrongFormat)
   predea = await axios.get(`https://api.agify.io/?name=${q}`)
   reply(`Nama : ${predea.data.name}\n*Mati Pada Umur :* ${predea.data.age} Tahun.\n\n_Cepet Cepet Tobat Bro Soalnya Mati ga ada yang tau_`)
   break
-case 'artinama':
+case 'artinama': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Namamya Mana Tod\nContoh: ${prefix + command} Zero YT7`)
 ini_nama = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/artinama?apikey=${lolkey}&nama=${ini_nama}`)
 reply(get_result.result)
 break
-case 'jodoh':
+case 'jodoh': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Namanya Mana Tod\nContoh: ${prefix + command} Zero & Sandrinna`)
 ini_nama = args.join(" ").split("&")
 nama1 = ini_nama[0].trim()
@@ -2505,7 +2718,9 @@ ini_txt += `Negative : ${get_result.negatif}\n`
 ini_txt += `Deskripsi : ${get_result.deskripsi}`
 reply(ini_txt)
 break
-case 'jadian':
+case 'jadian': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   jds = []
   jdii = groupMembers
   koss = groupMembers
@@ -2516,7 +2731,9 @@ case 'jadian':
   jds.push(diaa.jid)
   mentions(teks, jds, true)
   break
-case 'tebakumur':
+case 'tebakumur': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Namanya Mana Tod\nContoh: ${prefix + command} Zero YT7`)
 ini_name = args.join(" ")
 if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
@@ -2529,7 +2746,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR STALK ]━━━━━━━━━━━━━━━━━//
 
-case 'stalkig':
+case 'stalkig': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Usernamenya Mana Tod\nContoh: ${prefix + command} Sandrinna_11`)
 username = args[0]
 ini_result = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${username}?apikey=${lolkey}`)
@@ -2543,7 +2762,9 @@ ini_txt += `Following : ${ini_result.following}\n`
 ini_txt += `Bio : ${ini_result.bio}`
 zeroyt7.sendMessage(from, ini_buffer, image, { caption: ini_txt })
 break
-case 'stalktiktok':
+case 'stalktiktok': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Usernamenya Mana Tod\nContoh: ${prefix + command} Sandrinna`)
 stalk_toktok = args[0]
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/stalktiktok/${stalk_toktok}?apikey=${lolkey}`)
@@ -2558,7 +2779,9 @@ ini_txt += `Video : ${get_result.video}\n`
 pp_tt = await getBuffer(get_result.user_picture)
 zeroyt7.sendMessage(from, pp_tt, image, { quoted: fstatus, caption: ini_txt })
 break
-case 'stalkgithub':
+case 'stalkgithub': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length == 0) return reply(`Usernamenya Mana Tod\nContoh: ${prefix + command} Zero-YT7`)
 username = args[0]
 ini_result = await fetchJson(`https://api.lolhuman.xyz/api/github/${username}?apikey=${lolkey}`)
@@ -2576,40 +2799,44 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR RANDOM IMAGE ]━━━━━━━━━━━━━━━━━//
 
-case 'art':
-case 'bts':
-case 'exo':
-case 'elf':
-case 'loli':
-case 'neko':
-case 'waifu':
-case 'shota':
-case 'husbu':
-case 'sagiri':
-case 'shinobu':
-case 'megumin':
-case 'wallnime':
+case 'art': 
+case 'bts': 
+case 'exo': 
+case 'elf': 
+case 'loli': 
+case 'neko': 
+case 'waifu': 
+case 'shota': 
+case 'husbu': 
+case 'sagiri': 
+case 'shinobu': 
+case 'megumin': 
+case 'wallnime': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: fstatus })
 })
 break
-case 'chiisaihentai':
-case 'trap':
-case 'blowjob':
-case 'yaoi':
-case 'ecchi':
-case 'hentai':
-case 'ahegao':
-case 'hololewd':
-case 'sideoppai':
-case 'animefeets':
-case 'animebooty':
-case 'animethighss':
-case 'animearmpits':
-case 'hentaifemdom':
-case 'lewdanimegirls':
-case 'biganimetiddies':
-case 'hentai4everyone':
+case 'chiisaihentai': 
+case 'trap': 
+case 'blowjob': 
+case 'yaoi': 
+case 'ecchi': 
+case 'hentai': 
+case 'ahegao': 
+case 'hololewd': 
+case 'sideoppai': 
+case 'animefeets': 
+case 'animebooty': 
+case 'animethighss': 
+case 'animearmpits': 
+case 'hentaifemdom': 
+case 'lewdanimegirls': 
+case 'biganimetiddies': 
+case 'hentai4everyone': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${lolkey}`).then((gambar) => {
 zeroyt7.sendMessage(from, gambar, image, { quoted: fstatus })
 })
@@ -2617,14 +2844,18 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR OWNER ]━━━━━━━━━━━━━━━━━//
 
-case 'setname':
+case 'setname': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 if (args.length < 1) return reply('Teksnya?')
 anu = body.slice(9)
 zeroyt7.updateProfileName(anu)
 reply(`Sukses mengganti nama ke ${body.slice(9)}`)
 break
-case 'setpp':
+case 'setpp': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 zeroyt7.updatePresence(from, Presence.composing)
 if (!isQuotedImage) return reply('Reply imagenya!')
@@ -2633,14 +2864,18 @@ mediau = await zeroyt7.downloadAndSaveMediaMessage(encmedia)
 await zeroyt7.updateProfilePicture(botNumber, mediau)
 reply('Sukses')
 break
-case 'setbio':
+case 'setbio': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 if (args.length < 1) return reply('Teksnya?')
 iyek = body.slice(8)
 zeroyt7.setStatus(`${iyek}`)
 reply(`Sukses mengganti bio ke ${body.slice(8)}`)
 break 
-case 'bc':
+case 'bc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner) return reply(mess.only.owner)
 if (args.length < 1) return reply('Teksnya?')
 anu = await zeroyt7.chats.all()
@@ -2656,7 +2891,9 @@ await zeroyt7.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: fst
 }
 reply(`Sukses mengirim Broadcast:\n${q}`)
 break
-case 'bcgc':
+case 'bcgc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 if (args.length < 1) return reply('.......')
 anu = await groupMembers 
@@ -2675,7 +2912,9 @@ sendMess(_.jid, `𝘽𝙍𝙊𝘼𝘿𝘾𝘼𝙎𝙏 𝙂𝙍𝙐𝙋\n\n${body
 reply('Sukses broadcast group')
 }
 break
-case 'tobc':
+case 'tobc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 zeroyt7.updatePresence(from, Presence.composing)
 anu = await zeroyt7.chats.all()
@@ -2695,7 +2934,9 @@ zeroyt7.sendMessage(_.jid, buff, sticker, { quoted: fstatus, contextInfo: { forw
 reply('reply sticker/audio')
 }
 break
-case 'chat':
+case 'chat': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return  reply(mess.only.owner)
 if (args.length < 1) return reply(`Penggunaan ${prefix}chat 62xnxx|teks`)
 if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
@@ -2706,17 +2947,23 @@ var org = pc.split("|")[1];
 zeroyt7.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
 reply(`Sukses mengirim chat:\n${org},@${nomor}`)
 break
-case 'q':
+case 'q': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner && !mek.key.fromMe) return  reply(mess.only.owner)
 reply(JSON.stringify(mek.message.extendedTextMessage.contextInfo, null, 3))
 break
-case 'public':
+case 'public': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner && !mek.key.fromMe ) return
 if (banChats === true) return 
 banChats = true
 reply(`Sukses mode publik gan`)
 break
-case 'self':
+case 'self': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return
 if (banChats === false) return
 banChats = false
@@ -2759,7 +3006,9 @@ includeStarred: false
 reply(`Succes Delete All Chat🙂`)
 }
 break
-case 'setthumb':
+case 'setthumb': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner && !mek.key.fromMe) return reply(mess.only.owner)
 if (!isQuotedImage) return reply('Reply imagenya blokk!')
 const messimagethumb = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -2769,14 +3018,18 @@ await sleep(2000)
 fs.writeFileSync(`thumbnail.jpg`, downiamgethumb)
 reply('Succes')
 break
-case 'ban':
+case 'ban': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner && !mek.key.fromMe) return
 bnnd = `${args[0].replace('@', '')}@s.whatsapp.net`
 ban.push(bnnd)
 fs.writeFileSync('./F2/banned.json', JSON.stringify(ban))
 fakestatus(`Nomor ${bnnd} telah dibanned!`)
 break
-case 'unban':
+case 'unban': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isOwner && !mek.key.fromMe) return
 ya = `${args[0].replace('@', '')}@s.whatsapp.net`
 unb = ban.indexOf(ya)
@@ -2787,7 +3040,9 @@ break
 
 //━━━━━━━━━━━━━━━[ BUTTON VERIFY ]━━━━━━━━━━━━━━━━━//
 
-case 'verify':
+case 'verify': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (isRegistered) return reply('Akun kamu sudah terverfikasi')
 const serialUser = createSerial(18)
  try {
@@ -2817,49 +3072,65 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR ASUPAN ]━━━━━━━━━━━━━━━━━//
 
-case 'asupan':
+case 'asupan': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.result)
 zeroyt7.sendMessage(from, buffer, video, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupancecan':
+case 'asupancecan': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, image, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupanhijaber':
+case 'asupanhijaber': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/hijaber?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, image, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupansantuy':
+case 'asupansantuy': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/santuy?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, video, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupanukhti':
+case 'asupanukhti': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ukty?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, video, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupanbocil':
+case 'asupanbocil': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/bocil?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, video, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupanghea':
+case 'asupanghea': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ghea?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
 zeroyt7.sendMessage(from, buffer, video, {quoted: fstatus, caption: 'Nih Asupan >.<'})
 break
-case 'asupanrika':
+case 'asupanrika': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/rikagusriani?apikey=${zerokey}`)
 reply(mess.wait)
 buffer = await getBuffer(ini.result.url)
@@ -2868,37 +3139,49 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR CECAN ]━━━━━━━━━━━━━━━━━//
 
-case 'cecanvietnam':
+case 'cecanvietnam': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/vietnam?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
 zeroyt7.sendMessage(from, goo, image, {quoted: fstatus, caption: 'Nih Cecan🐣'})
 break
-case 'cecanmalaysia':
+case 'cecanmalaysia': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/malaysia?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
 zeroyt7.sendMessage(from, goo, image, {quoted: fstatus, caption: 'Nih Cecan🐣'})
 break
-case 'cecankorea':
+case 'cecankorea': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/korea?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
 zeroyt7.sendMessage(from, goo, image, {quoted: fstatus, caption: 'Nih Cecan🐣'})
 break
-case 'cecanindonesia':
+case 'cecanindonesia': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/indonesia?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
 zeroyt7.sendMessage(from, goo, image, {quoted: fstatus, caption: 'Nih Cecan🐣'})
 break
-case 'cecanjapan':
+case 'cecanjapan': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/japan?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
 zeroyt7.sendMessage(from, goo, image, {quoted: fstatus, caption: 'Nih Cecan🐣'})
 break
-case 'cecanthailand':
+case 'cecanthailand': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 huft = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/cewe/thailand?apikey=${zerokey}`)
 reply(mess.wait)
 goo = await getBuffer(huft.result.url)
@@ -2911,11 +3194,15 @@ case 'bokep1':
    qute = fs.readFileSync('thumbnail.jpg')
    zeroyt7.sendMessage(from, qute, image, { quoted: fstatus, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/h2nygxbyb6n9cyo/VID-20210107-WA1468.mp4/file' })
    break
-case 'bokep2':
+case 'bokep2': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    qute = fs.readFileSync('thumbnail.jpg')
    zeroyt7.sendMessage(from, qute, image, { quoted: fstatus, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/pk8hozohzdc076c/VID-20210107-WA1466.mp4/file' })
    break
-case 'bokep3':
+case 'bokep3': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    qute = fs.readFileSync('thumbnail.jpg')
    zeroyt7.sendMessage(from, qute, image, { quoted: fstatus, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/112q3u286tnvzjo/VID-20210107-WA1467.3gp/file' })				    
    break
@@ -2930,25 +3217,39 @@ case 'bokep5':
 
 //━━━━━━━━━━━━━━━[ FITUR SOUND ]━━━━━━━━━━━━━━━━━//
 
-case 'sound1':
+case 'sound1': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, sound1, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break                          
-case 'sound2':
+case 'sound2': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, sound2, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break 
-case 'sound3':
+case 'sound3': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, sound3, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break 
-case 'sound4':
+case 'sound4': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, sound4, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break       
-case 'sound5':
+case 'sound5': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, sound5, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break           
-case 'desah':
+case 'desah': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
    zeroyt7.sendMessage(from, desahan4, audio, { mimetype: 'audio/mp4', duration: 999999999, ptt: true, quoted: fvn})
    break
-case 'slow':
+case 'slow': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await zeroyt7.downloadAndSaveMediaMessage(encmedia)
 ran = getRandom('.mp3')
@@ -2960,7 +3261,9 @@ zeroyt7.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: 
 fs.unlinkSync(ran)
 })
 break
-case 'fast':
+case 'fast': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 try {
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await zeroyt7.downloadAndSaveMediaMessage(encmedia)
@@ -2976,7 +3279,9 @@ fs.unlinkSync(ran)
 reply(mess.error.api)
 }  
 break
-case 'robot':
+case 'robot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media = await zeroyt7.downloadAndSaveMediaMessage(encmedia)
 ran = getRandom('.mp3')
@@ -2988,7 +3293,9 @@ zeroyt7.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted:
 fs.unlinkSync(ran)
 })
 break
-case 'addvn':
+case 'addvn': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 svst = body.slice(7)
 if (!svst) return reply('Nama audionya apa su?')
 boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -2998,14 +3305,18 @@ fs.writeFileSync(`./F1/${svst}.mp3`, delb)
 fs.writeFileSync('./F1/audio.json', JSON.stringify(audionye))
 zeroyt7.sendMessage(from, `Sukses Menambahkan Vn ke dalam database\nSilahkann Cek dengan cara ${prefix}listvn`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('thumbnail.jpg')} }} }) 
 break
-case 'getvn':
+case 'getvn': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply('Masukan nama yang terdaftar di list vn')
 namastc = body.slice(7)
 buffer = fs.readFileSync(`./F1/${namastc}.mp3`)
 zeroyt7.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4',  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('thumbnail.jpg')} }}, ptt: true })
 break
-case 'listvn':
-case 'vnlist':
+case 'listvn': 
+case 'vnlist': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 teks = '*List Vn:*\n\n'
 for (let awokwkwk of audionye) {
 teks += `- ${awokwkwk}\n`
@@ -3013,7 +3324,9 @@ teks += `- ${awokwkwk}\n`
 teks += `\n*Total : ${audionye.length}*`
 zeroyt7.sendMessage(from, teks.trim(), extendedText, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('thumbnail.jpg')} }}, contextInfo: { "mentionedJid": audionye } })
 break
-case 'addimage':
+case 'addimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isQuotedImage) return reply('Reply imagenya blokk!')
 svst = body.slice(10)
 if (!svst) return reply('Nama imagenya apa su?')
@@ -3024,15 +3337,19 @@ fs.writeFileSync(`./F1/${svst}.jpeg`, delb)
 fs.writeFileSync('./F1/images.json', JSON.stringify(imagenye))
 zeroyt7.sendMessage(from, `Sukses Menambahkan image ke dalam database\nSilahkan cek dengan cara ${prefix}listimage`, MessageType.text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('thumbnail.jpg')} }} }) 
 break
-case 'getimage':
-case 'getimg':
+case 'getimage': 
+case 'getimg': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply('Masukan nama yang terdaftar di list image')
 namastc = body.slice(10)
 buffer = fs.readFileSync(`./F1/${namastc}.jpeg`)
 zeroyt7.sendMessage(from, buffer, image, {  quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "_SelfBot OnlyDev City_", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JStw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('thumbnail.jpg')} }}, caption: `Result From Database : ${namastc}.jpeg` })
 break
-case 'imagelist':
-case 'listimage':
+case 'imagelist': 
+case 'listimage': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 teks = '*List Image :*\n\n'
 for (let awokwkwk of imagenye) {
 teks += `- ${awokwkwk}\n`
@@ -3043,7 +3360,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR OTHER ]━━━━━━━━━━━━━━━━━//
 
-case 'ultah': case 'hbd':
+case 'ultah': case 'hbd': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply(`Usage : #ultah tahun-bulan-tanggal\nExample : #ultah 2004-01-12`)
 if (!args[0].includes("-")) return reply(`Usage : #ultah tahun-bulan-tanggal\nExampla : #ultah 2006-01-12`)
 qq = q
@@ -3083,19 +3402,23 @@ reply(`
 *Zodiak : ${zodiackk}*
 `.trim())
 break
-case 'tag':
+case 'tag': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply(`Penggunaan ${prefix}tag 62xnxx`)
 var nomqm = `${body.slice(5)}@s.whatsapp.net`
 tagq = `@${nomqm.split('@')[0]}` 
 zeroyt7.sendMessage(from, tagq, text, { quoted: fstatus, contextInfo: { forwardingScore: 508, isForwarded: true, mentionedJid: [nomqm]}})
 break
-case 'tagme':
+case 'tagme': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 var nomqm = mek.participant
 tagu = `@${nomqm.split('@s.whatsapp.net')[0]}`
 zeroyt7.sendMessage(from, tagu, text, { quoted: fstatus, contextInfo: { forwardingScore: 508, isForwarded: true, mentionedJid: [nomqm]}})
 break
-case 'd':
-case 'del':
+case 'd': 
+case 'del': 
 case 'delete': 
 try {
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Reply chat bot')
@@ -3104,8 +3427,10 @@ zeroyt7.deleteMessage(from, {id: mek.message.extendedTextMessage.contextInfo.sta
 reply('Reply chat bot')
 }
 break
-case 'done':
-case 'owner':
+case 'done': 
+case 'owner': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 members_ids = []
 for (let mem of groupMembers) {
 members_ids.push(mem.jid)
@@ -3122,7 +3447,9 @@ zeroyt7.sendMessage(from, {displayName: `Creator ${ownername}`, vcard: vcard2}, 
    sendButMessage (from, kon1, kon2, kon3, { quoted: mek})
    break      
 break
-case 'report':
+case 'report': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 const pesan = body.slice(8)
 if (pesan.length > 300) return pras.sendMessage(from, 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks', text, { quoted: fstatus })
 var nomor = mek.participant
@@ -3134,8 +3461,10 @@ contextInfo: { mentionedJid: [nomor] },
 zeroyt7.sendMessage(`6287778886786@s.whatsapp.net`, options, text, { quoted: fstatus })
 reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
 break
-case 'nulis':
-case 'tulis':
+case 'nulis': 
+case 'tulis': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply('Yang mau di tulis apaan?')
 teks = args.join(' ')
 reply(mess.wait)
@@ -3147,8 +3476,10 @@ zeroyt7.sendMessage(from, buff, image, {quoted: fstatus, caption: mess.success})
 return reply('_[ ! ] Error Gagal Dalam Mendownload Dan Mengirim File_')
 })
 break
-case 'botstat':
-case 'infobot':
+case 'botstat': 
+case 'infobot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 groups = zeroyt7.chats.array.filter(v => v.jid.endsWith('g.us'))
 privat = zeroyt7.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 totalChat = await zeroyt7.chats.all()
@@ -3182,7 +3513,9 @@ break
  
 //━━━━━━━━━━━━━━━[ STORE ]━━━━━━━━━━━━━━━━━//
 
-case 'store':
+case 'store': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 list = []
 listmenu = [`owner`,`sc`,`sewabot`,`muridbot`]
 listmenuu = [`Owner`,`Script Bot`,`Sewa Bot`,`Murid Bot`]
@@ -3202,9 +3535,11 @@ list.push(yy)
    }
 listmsg(from, `Mau Buy Apaan Kak😄`, `  `, list)
 break
-case 'belipremium':
-case 'buypremium':
-case 'sewabot':
+case 'belipremium': 
+case 'buypremium': 
+case 'sewabot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 gopeynya = 'https://i.ibb.co/74b0scg/017d218d9581.jpg'
 buff = await getBuffer(gopeynya)
 lolot = 
@@ -3231,7 +3566,9 @@ but = but = [{ buttonId: `${prefix}gopay`, buttonText: { displayText: 'Gopay' },
 ok = `Neo Bot By KunzxD`
 sendButLoc(from, lolot, ok, img, but)
 break
-case 'muridbot':
+case 'muridbot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 katalog(`Open Murid Bot By KunzxD
 
 Harga Join : 15K
@@ -3245,9 +3582,11 @@ Pay : Gopay/Dana/Allpay
 Minat?
 wa.me/6287778886786 (Kunz)`)
 break
-case 'script':
-case 'sc':
-case 'sourcecode':
+case 'script': 
+case 'sc': 
+case 'sourcecode': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu =`╭─❒ SCRIPT
 │◦➛Base : ZeroYT7
 │◦➛Recode : KunzxD
@@ -3263,24 +3602,30 @@ break
 
 //====================>PEMBAYARAN<===================
 
-case 'gopay':
-case 'qrgopay':
+case 'gopay': 
+case 'qrgopay': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 teks = `Bantu Bot Dengan Donasi Agar Bot Update😄`
 gipay = fs.readFileSync('./F4/gopay.jpg')
 trans = `Neo Bot By KunzxD😈`
 but = [{ buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner' }, type: 1 }]
 sendButImage(from, teks, trans, gipay, but)
 break
-case 'dana':
-case 'qrdana':
+case 'dana': 
+case 'qrdana': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 teks = `Bantu Bot Dengan Donasi Agar Bot Update😄`
 donat = fs.readFileSync('./F4/dana.jpg')
 trans = `Neo Bot By KunzxD😈`
 but = [{ buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner' }, type: 1 }]
 sendButImage(from, teks, trans, donat, but)
 break
-case 'allpay':
-case 'qrallpay':
+case 'allpay': 
+case 'qrallpay': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 teks = `Bantu Bot Dengan Donasi Agar Bot Update😄`
 qrall = fs.readFileSync('./F4/allpay.jpg')
 trans = `Neo Bot By KunzxD😈`
@@ -3289,7 +3634,9 @@ sendButImage(from, teks, trans, qrall, but)
 break
 
 //━━━━━━━━━━━━━━━[ REPLY ]━━━━━━━━━━━━━━━━━//
-  case 'waktu':
+  case 'waktu': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   reply(`《Waktu Menuju》
 ${newYear}
 ${Ramadhan}
@@ -3301,20 +3648,30 @@ Wita : ${Wita}
 Wit : ${Wit}`)
 break
 
-  case 'readmore':
+  case 'readmore': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   reply('‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎')
   break
-  case 'rulesgroup':
+  case 'rulesgroup': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   reply(`*Desc :* \n${groupMetadata.desc}`)
   break
-  case 'bay':
+  case 'bay': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   reply(`Sayonara buat yang pergi😔\n Semoga amal ibadahnya di terima :)`)
   break
-  case 'selamatdatang':
+  case 'selamatdatang': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
   reply('welcome kak jangan lupa patuhi peraturan  grup ya kaka \n Semoga betah👏')
   break
-case 'groupbot':
-case 'botgroup':
+case 'groupbot': 
+case 'botgroup': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 reply(`Grup 1 :
 https://chat.whatsapp.com/GDZOBuMkFSCKw6mzDUDoPd
 Grup 2 :
@@ -3337,13 +3694,13 @@ pingnya = `*${ssd}Speed: ${latensi.toFixed(4)} Second*`;
 reply(pingnya);
 });
 break
-case 'premiumcheck':
+case 'premiumcheck': 
 case 'cekpremium': 
 if (!isPremium) return sendButMessage (mess.only.prem)
 const cekExp = ms(await premium.getPremiumExpired(sender, _premium) - Date.now())
 reply(`*「 PREMIUM EXPIRE 」*\n\n➸ *ID*: ${sender}\n➸ *Premium left*: ${cekExp.days} day(s) ${cekExp.hours} hour(s) ${cekExp.minutes} minute(s)`)
 break
-case 'listprem':
+case 'listprem': 
 case 'listpremium':          
 let txt = `「 *PREMIUM USER LIST* 」\n\n`
 let men = [];
@@ -3357,74 +3714,78 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR MAKER ]━━━━━━━━━━━━━━━━━//
 
-case 'blackpink':
-case 'neon':
-case 'greenneon':
-case 'advanceglow':
-case 'futureneon':
-case 'sandwriting':
-case 'sandsummer':
-case 'sandengraved':
-case 'metaldark':
-case 'neonlight':
-case 'holographic':
-case 'text1917':
-case 'minion':
-case 'deluxesilver':
-case 'newyearcard':
-case 'bloodfrosted':
-case 'halloween':
-case 'jokerlogo':
-case 'fireworksparkle':
-case 'natureleaves':
-case 'bokeh':
-case 'toxic':
-case 'strawberry':
-case 'box3d':
-case 'roadwarning':
-case 'breakwall':
-case 'icecold':
-case 'luxury':
-case 'cloud':
-case 'summersand':
-case 'horrorblood':
-case 'thunder':
+case 'blackpink': 
+case 'neon': 
+case 'greenneon': 
+case 'advanceglow': 
+case 'futureneon': 
+case 'sandwriting': 
+case 'sandsummer': 
+case 'sandengraved': 
+case 'metaldark': 
+case 'neonlight': 
+case 'holographic': 
+case 'text1917': 
+case 'minion': 
+case 'deluxesilver': 
+case 'newyearcard': 
+case 'bloodfrosted': 
+case 'halloween': 
+case 'jokerlogo': 
+case 'fireworksparkle': 
+case 'natureleaves': 
+case 'bokeh': 
+case 'toxic': 
+case 'strawberry': 
+case 'box3d': 
+case 'roadwarning': 
+case 'breakwall': 
+case 'icecold': 
+case 'luxury': 
+case 'cloud': 
+case 'summersand': 
+case 'horrorblood': 
+case 'thunder': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply('*Teks nya mana?*')
 reply(mess.wait)
 ini_txt = args.join(" ")
 anu = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=${lolkey}&text=${ini_txt}`)
 zeroyt7.sendMessage(from,anu,image,{quoted:fstatus,caption: 'Nih Kak',thumbnail: Buffer.alloc(0)})
 break
-case 'wetglass':
-case 'multicolor3d':
-case 'watercolor':
-case 'luxurygold':
-case 'galaxywallpaper':
-case 'lighttext':
-case 'beautifulflower':
-case 'puppycute':
-case 'royaltext':
-case 'heartshaped':
-case 'birthdaycake':
-case 'galaxystyle':
-case 'hologram3d':
-case 'greenneon':
-case 'glossychrome':
-case 'greenbush':
-case 'metallogo':
-case 'noeltext':
-case 'glittergold':
-case 'textcake':
-case 'starsnight':
-case 'wooden3d':
-case 'textbyname':
-case 'writegalacy':
-case 'galaxybat':
-case 'snow3d':
-case 'birthdayday':
-case 'goldplaybutton':
-case 'silverplaybutton':
-case 'freefire':
+case 'wetglass': 
+case 'multicolor3d': 
+case 'watercolor': 
+case 'luxurygold': 
+case 'galaxywallpaper': 
+case 'lighttext': 
+case 'beautifulflower': 
+case 'puppycute': 
+case 'royaltext': 
+case 'heartshaped': 
+case 'birthdaycake': 
+case 'galaxystyle': 
+case 'hologram3d': 
+case 'greenneon': 
+case 'glossychrome': 
+case 'greenbush': 
+case 'metallogo': 
+case 'noeltext': 
+case 'glittergold': 
+case 'textcake': 
+case 'starsnight': 
+case 'wooden3d': 
+case 'textbyname': 
+case 'writegalacy': 
+case 'galaxybat': 
+case 'snow3d': 
+case 'birthdayday': 
+case 'goldplaybutton': 
+case 'silverplaybutton': 
+case 'freefire': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (args.length < 1) return reply('*Teks nya mana?*')
 reply(mess.wait)
 ini_txt = args.join(" ")
@@ -3434,19 +3795,25 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR RANDOM MEME ]━━━━━━━━━━━━━━━━━//
 
-case 'meme':
+case 'meme': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 await getBuffer(`https://api.lolhuman.xyz/api/random/meme?apikey=${lolkey}`).then((gambar) => {
 reply(mess.wait)
 zeroyt7.sendMessage(from, gambar, image, {quoted: fstatus, caption: 'Dark Ajg', thumbnail: Buffer.alloc(0)})
 })
 break
-case 'darkjoke':
+case 'darkjoke': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=${lolkey}`).then((gambar) => {
 reply(mess.wait)
 zeroyt7.sendMessage(from, gambar, image, {quoted: fstatus, caption: 'Dark Ajg', thumbnail: Buffer.alloc(0)})
 })
 break
-case 'memeindo':
+case 'memeindo': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 await getBuffer(`https://api.lolhuman.xyz/api/meme/memeindo?apikey=${lolkey}`).then((gambar) => {
 reply(mess.wait)
 zeroyt7.sendMessage(from, gambar, image, {quoted: fstatus, caption: 'Dark Ajg', thumbnail: Buffer.alloc(0)})
@@ -3455,7 +3822,9 @@ break
 
 //━━━━━━━━━━━━━━━[ FITUR GAME ]━━━━━━━━━━━━━━━━━//
 
-case 'absensi':
+case 'absensi': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 absen.push(sender)
 fs.writeFileSync('./F2/absen.json', JSON.stringify(absen))
@@ -3466,7 +3835,9 @@ teks += `\n々 @${sender.split('@')[0]} ✓\n`
 teks += `TOTAL MEMBER YG ABSEN : ${absen.length}\n\nKetik ${prefix}absensi untuk absen, Daftar list absen akan dikumpulkan setelah waktu yang diberikan telah berakhir!`
 zeroyt7.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": absen}})
 break
-case 'absen':
+case 'absen': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply(`Cara Memulai Absen Silahkan Ketik\n\n${prefix}absen waktu\n\nlist menit yang tersedia.\n\n600000 | 1200000 | 1800000\n\njadi ${prefix}absen 600000`)
 tem = args.join(" ")
@@ -3489,24 +3860,32 @@ absen.splice(ini, 1)
 fs.writeFileSync('./F4/absen.json', JSON.stringify(absen))
 }, tem)
 break
-case 'truth':
+case 'truth': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 const trut =['Pernah suka sama siapa aja? berapa lama?','Kalau boleh atau kalau mau, di gc/luar gc siapa yang akan kamu jadikan sahabat?(boleh beda/sma jenis)','apa ketakutan terbesar kamu?','pernah suka sama orang dan merasa orang itu suka sama kamu juga?','Siapa nama mantan pacar teman mu yang pernah kamu sukai diam diam?','pernah gak nyuri uang nyokap atau bokap? Alesanya?','hal yang bikin seneng pas lu lagi sedih apa','pernah cinta bertepuk sebelah tangan? kalo pernah sama siapa? rasanya gimana brou?','pernah jadi selingkuhan orang?','hal yang paling ditakutin','siapa orang yang paling berpengaruh kepada kehidupanmu','hal membanggakan apa yang kamu dapatkan di tahun ini','siapa orang yang bisa membuatmu sange','siapa orang yang pernah buatmu sange','(bgi yg muslim) pernah ga solat seharian?','Siapa yang paling mendekati tipe pasangan idealmu di sini','suka mabar(main bareng)sama siapa?','pernah nolak orang? alasannya kenapa?','Sebutkan kejadian yang bikin kamu sakit hati yang masih di inget','pencapaian yang udah didapet apa aja ditahun ini?','kebiasaan terburuk lo pas di sekolah apa?']
 const ttrth = trut[Math.floor(Math.random() * trut.length)]
 truteh = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 zeroyt7.sendMessage(from, truteh, image, { caption: '*Truth*\n\n'+ ttrth, quoted: fstatus })
 break
-case 'dare':
+case 'dare': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 const dare =['Kirim pesan ke mantan kamu dan bilang "aku masih suka sama kamu','telfon crush/pacar sekarang dan ss ke pemain','pap ke salah satu anggota grup','Bilang "KAMU CANTIK BANGET NGGAK BOHONG" ke cowo','ss recent call whatsapp','drop emot "??💨" setiap ngetik di gc/pc selama 1 hari','kirim voice note bilang can i call u baby?','drop kutipan lagu/quote, terus tag member yang cocok buat kutipan itu','pake foto sule sampe 3 hari','ketik pake bahasa daerah 24 jam','ganti nama menjadi "gue anak lucinta luna" selama 5 jam','chat ke kontak wa urutan sesuai %batre kamu, terus bilang ke dia "i lucky to hv you','prank chat mantan dan bilang " i love u, pgn balikan','record voice baca surah al-kautsar','bilang "i hv crush on you, mau jadi pacarku gak?" ke lawan jenis yang terakhir bgt kamu chat (serah di wa/tele), tunggu dia bales, kalo udah ss drop ke sini','sebutkan tipe pacar mu!','snap/post foto pacar/crush','teriak gajelas lalu kirim pake vn kesini','pap mukamu lalu kirim ke salah satu temanmu','kirim fotomu dengan caption, aku anak pungut','teriak pake kata kasar sambil vn trus kirim kesini','teriak " anjimm gabutt anjimmm " di depan rumah mu','ganti nama jadi " BOWO " selama 24 jam','Pura pura kerasukan, contoh : kerasukan maung, kerasukan belalang, kerasukan kulkas, dll']
 const der = dare[Math.floor(Math.random() * dare.length)]
 dera = await getBuffer(`https://i.ibb.co/305yt26/bf84f20635dedd5dde31e7e5b6983ae9.jpg`)
 zeroyt7.sendMessage(from, dera, image, { caption: '*dare*\n\n'+ der, quoted: fstatus })
 break
-case 'slot':
-case 'slots':
+case 'slot': 
+case 'slots': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 const somtoy = sotoy[Math.floor(Math.random() * sotoy.length)]
 zeroyt7.sendMessage(from, `[  🎰 | SLOTS ]\n-----------------\n🍋 : 🍌 : 🍍\n${somtoy}<=====\n🍋 : 🍌 : 🍍\n[  🎰 | SLOTS ]\n\nKeterangan : Jika anda Mendapatkan 3Buah Sama Berarti Anda Menang\n\nContoh : 🍌 : 🍌 : 🍌<=====`, MessageType.text, { quoted: mek })
 break
-case 'tebakkalimat':
+case 'tebakkalimat': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kalimat`, {method: 'get'})
 get = `*${anu.result.soal}*`
 setTimeout( () => {
@@ -3535,7 +3914,9 @@ setTimeout( () => {
 zeroyt7.sendMessage(from, get, text, {quoted: fstatus})
 }, 0) // 1000 = 1s,
 break
-case 'tebaktebakan':
+case 'tebaktebakan': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/tebakan`, {method: 'get'})
 get = `*${anu.result.soal}*`
 setTimeout( () => {
@@ -3564,7 +3945,9 @@ setTimeout( () => {
 zeroyt7.sendMessage(from, get, text, {quoted: fstatus})
 }, 0) // 1000 = 1s,
 break
-case 'tebaklirik':
+case 'tebaklirik': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/lirik`, {method: 'get'})
 get = `*${anu.result.question}*`
 setTimeout( () => {
@@ -3593,7 +3976,9 @@ setTimeout( () => {
 zeroyt7.sendMessage(from, get, text, {quoted: fstatus})
 }, 0) // 1000 = 1s,
 break
-case 'tebakkimia':
+case 'tebakkimia': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/kimia`, {method: 'get'})
 get = `*${anu.result.nama}*`
 setTimeout( () => {
@@ -3622,7 +4007,9 @@ setTimeout( () => {
 zeroyt7.sendMessage(from, get, text, {quoted: fstatus}) 
 }, 0) // 1000 = 1s,
 break
-case 'tebakjenaka':
+case 'tebakjenaka': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 anu = await fetchJson(`https://velgrynd.herokuapp.com/api/tebak/jenaka`, {method: 'get'})
 tebakjenaka = `*${anu.result.pertanyaan}*`
 setTimeout( () => {
@@ -3651,7 +4038,9 @@ setTimeout( () => {
 zeroyt7.sendMessage(from, tebakjenaka, text, {quoted: fstatus}) 
 }, 0) // 1000 = 1s,
 break
-case 'suit':
+case 'suit': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!q) return reply(`Kirim perintah ${prefix}suit [pilihan]\nContoh: ${prefix}suit gunting`)
 if (!q.match(/batu|gunting|kertas/)) return reply(`Format salah!`)
 if (q.match(/batu|gunting|kertas/)) {
@@ -3687,8 +4076,10 @@ reply(`*RESULT*\n\n• You: Kertas\n• Computer: Gunting\n\nYou lose:(`)
 }
 }
 break
-case 'tictactoe':
-case 'ttt':
+case 'tictactoe': 
+case 'ttt': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (args.length < 1) return reply('Tag Lawan Anda! ')
 if (isTTT) return reply('Sedang Ada Permainan Di Grub Ini, Harap Tunggu')
@@ -3708,16 +4099,20 @@ Ketik Y/N untuk menerima atau menolak permainan
 
 Ket : Ketik /resetgame , Untuk Mereset Permainan Yg Ada Di Grup!`, text, {contextInfo: {mentionedJid: [player2]}})
 break
-case 'delsesittt':
-case 'resetgame':
-case 'delttt':
+case 'delsesittt': 
+case 'resetgame': 
+case 'delttt': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (!isTTT) return reply('Tidak Ada Permainan Di Grub Ini')
 naa = ky_ttt.filter(toek => !toek.id.includes(from)) 
 ky_ttt = naa 
 reply('Sukses Mereset Game')
 break
-case 'gelud':
+case 'gelud': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply('Hanya bisa dengan 1 orang')
 if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) return
@@ -3734,7 +4129,9 @@ starGame = `👑 Memulai Game Baku Hantam ????
 [ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
 zeroyt7.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 break
-case 'delsesigelud':
+case 'delsesigelud': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isGroup) return reply(mess.only.group)
 if (fs.existsSync('./F4/' + from + '.json')) {
 fs.unlinkSync('./F4/' + from + '.json')
@@ -3746,7 +4143,9 @@ break
    
 //━━━━━━━━━━━━━━━[ PREMIUM ]━━━━━━━━━━━━━━━━━//
 
-// case 'jadibot':
+// case 'jadibot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 client.version = [2, 4143, 4]
 client.browserDescription = ['Dcode Denpa','Desktop','3.0']
 if (args[0] && args[0].length > 200) {
@@ -3781,7 +4180,9 @@ reply('Berhasil tersambung dengan WhatsApp - mu.\n*NOTE: Ini cuma numpang*\n' + 
 reply('Error! hanya 1 orang yang dapat mengakses fitur jadibot')
 }
 break
-// case 'stopjadibot':
+// case 'stopjadibot': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 try {
 reply('Oke')
 fs.unlinkSync(`./F4/${sender}.json`)
@@ -3794,7 +4195,9 @@ break
 
 //━━━━━━━━━━━━━━━[ WAR ]━━━━━━━━━━━━━━━━━//
 
-case 'buglokasi':
+case 'buglokasi': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return reply(mess.only.owner)
 zeroyt7.updatePresence(from, Presence.composing)
    zeroyt7.sendMessage(from, {degreesLatitude: 34.0184,
@@ -3819,8 +4222,10 @@ sellerJid: '0@s.whatsapp.net' // Seller
  }
 })
 break
-case 'bugpc':
-case 'bugpc':
+case 'bugpc': 
+case 'bugpc': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return reply(mess.only.owner)
 zeroyt7.updatePresence(from, Presence.composing)
 zeroyt7.sendMessage(from, 'yaudah oke',text, {
@@ -3841,7 +4246,9 @@ sellerJid: '0@s.whatsapp.net' // Seller
  }
 })
 break
-case 'bugtroli2':
+case 'bugtroli2': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return reply(mess.only.owner)
 if (args.length < 1) return reply('Jumlahnya?')
 zeroyt7.updatePresence(from, Presence.composing)
@@ -3897,82 +4304,57 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "62882248593508@s.whats
 }
 }
 break
-case 'tovirgam':
-case 'jadivirgam':
-case 'tobug':
-if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
-if (!isQuotedSticker) return reply(' reply sticker Yang mau dijadikan Virgam')
-reply(mess.wait)
-const virgamnye = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-virgamm = await zeroyt7.downloadAndSaveMediaMessage(virgamnye, './F4/images/')
-ran = getRandom('.png')
-exec(`ffmpeg -i ${virgamm} ${ran}`, (err) => {
-fs.unlinkSync(virgamm)
-if (err) return reply('VIRGAM = VIRUS GAMBAR, NAH GAMBAR EMANG ADA YANG BERGERAK..!!')
-buffer = fs.readFileSync(ran)
-zeroyt7.sendMessage(from, buffer, image, {quoted: fstatus, thumbnail:virgam, caption: 'Nih Fotonya\n\n⚠️*Perhatian.!!*⚠️\nFoto ini Mengandung Virgam/Bug SW!!\nTeruskan Gambar ini ke Target/jadikan SW'})
-fs.unlinkSync(ran)
-})
-break
-case 'tovirvid' : 
-case 'jadivirvid':
-if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
-reply(mess.wait) 
-if ((isMedia && !mek.message.videoMessage || isQuotedVideo) && args.length == 0) {
-encmediau = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-file = await zeroyt7.downloadAndSaveMediaMessage(encmediau, filename = getRandom())
-value = args.join(" ")
-var group = await zeroyt7.groupMetadata(from)
-var member = group['participants']
-var memg = []
-member.map(async adm => {
-mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
-})
-var options = {
-mimetype : 'video/mp4', duration: 234,
-contextInfo: { mentionedJid: memg },
-quoted: fvn
-}
-ini_buffer = fs.readFileSync(file)
-zeroyt7.sendMessage(from, ini_buffer, video, {quoted: fstatus, thumbnail:virgam, caption: 'Nih Videonya\n\n⚠️Perhatian.!!⚠️\nVideo ini Mengandung Virvid/Bug SW!!'}, options)
-fs.unlinkSync(file)
-} else{
-reply(`Ada Kesalahan.. Silahkan Reply Videonya ketik ${prefix}tovirvid`)
-}
-break
-case 'virtex1':
+case 'virtex1': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex)
 break
-case 'virtex2':
+case 'virtex2': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex2)
 break
-case 'virtex3':
+case 'virtex3': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex3)
 break
-case 'virtex4':
+case 'virtex4': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex4)
 break
-case 'virtex5':
+case 'virtex5': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex5)
 break
-case 'virtex6':
+case 'virtex6': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex6)
 break
-case 'virtex7':
+case 'virtex7': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex7)
 break
-case 'virtex8':
+case 'virtex8': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(virtex8)
 break
-case 'vipi':
+case 'vipi': 
+if (isBanned) return reply(mess.Ban) 
+if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: fstatus})
 if (!isPremium && !isOwner && !mek.key.fromMe ) return sendButMessage (mess.only.prem) 
 reply(vipi)
 break
